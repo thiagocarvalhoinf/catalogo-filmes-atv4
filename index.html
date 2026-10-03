@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de filmes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <header class="cabecalho">
+            <a class="marca" href="index.html"><span class="icone-marca" aria-hidden="true">▶</span> cine<span>list</span></a>
+            <span class="selo">CATÁLOGO DE FILMES</span>
+        </header>
+        <section class="apresentacao">
+            <div>
+                <p class="etiqueta">LUZ, CÂMERA, ORGANIZAÇÃO</p>
+                <h1>O melhor lugar para<br>organizar <span>seus filmes.</span></h1>
+                <p class="descricao">Dos clássicos aos novos favoritos. Organize os filmes que você já assistiu ou quer assistir em um só lugar.</p>
+            </div>
+            <div class="arte-cinema" aria-hidden="true">
+                <div class="cartaz cartaz-tras"></div>
+                <div class="cartaz cartaz-frente"><span class="cartaz-numero">01 / CINEMA</span><div class="orbita"></div><span class="cartaz-titulo"></span><span class="cartaz-rodape">A PRÓXIMA SESSÃO É SUA</span></div>
+            </div>
+        </section>
+        <div class="conteudo">
+        <section class="painel cadastro">
+            <p class="etiqueta">AMPLIE SUA COLEÇÃO</p>
+            <h2>Novo filme</h2>
+            <p class="texto-apoio">Preencha os detalhes para adicionar.</p>
+
+        <form id="formulario">
+            <label for="titulo">Título do filme:</label>
+            <input type="text" id="titulo" placeholder="Ex.: Interestelar" required maxlength="100">
+
+            <label for="genero">Gênero:</label>
+            <select id="genero" required>
+                <option value="">Selecione</option>
+                <option>Ação</option>
+                <option>Aventura</option>
+                <option>Comédia</option>
+                <option>Drama</option>
+                <option>Ficção científica</option>
+                <option>Romance</option>
+                <option>Terror</option>
+                <option>Outro</option>
+            </select>
+
+            <label for="ano">Ano de lançamento:</label>
+            <input type="number" id="ano" placeholder="Ex.: 2014" min="1888" max="2100" step="1" required>
+
+            <button type="submit"><span aria-hidden="true">＋</span> Adicionar ao catálogo</button>
+        </form>
+
+        <p id="mensagem" role="status"></p>
+        </section>
+        <section class="painel colecao">
+            <div class="titulo-colecao">
+                <div><p class="etiqueta">SUA SELEÇÃO</p><h2>Minha coleção</h2></div>
+                <p id="total" class="contador"></p>
+            </div>
+            <ul id="lista"></ul>
+            <div class="rodape-colecao"><span>Salvo neste navegador</span><button type="button" id="limpar">Limpar registros</button></div>
+        </section>
+        </div>
+        <footer>cinelist <span>·</span> Cada filme, uma história para guardar.</footer>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
